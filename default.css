@@ -14,6 +14,8 @@
 	--pillTextColorLight: #333;
 	--pillBgColorDark: #007bff;
 	--pillTextColorDark: #fff;
+
+
 }
 
 
@@ -314,6 +316,19 @@ h6 { font-size: 16px;}
 	overflow: hidden;
 	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 	transition: box-shadow 0.3s ease-in-out;
+	min-height: 300px; /* Set a minimum height or adjust as needed */
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between; /* This will push the footer to the bottom */
+	align-items: flex-start;
+}
+
+.post img {
+	flex-shrink: 0; /* Prevent the image from shrinking */
+}
+
+.post-preview {
+	flex-grow: 1; /* Allow the content to fill the space */
 }
 
 .post:hover {
@@ -367,6 +382,7 @@ h6 { font-size: 16px;}
 	background-color: #fff;
 	text-align: center;
 	padding: 1rem;
+	min-height: 150px;
 }
 
 .post-title{
