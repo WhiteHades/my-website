@@ -23,3 +23,9 @@ function setTheme(mode) {
 	}
 	localStorage.setItem('theme', mode);
 }
+
+document.querySelectorAll('.thumbnail-wrapper').forEach(item => {
+	item.addEventListener('click', function() {
+		window.location.href = this.getAttribute('data-href');
+	});
+});
