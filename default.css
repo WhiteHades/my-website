@@ -10,6 +10,10 @@
 	--buttonColor:black;
 	--borderRadius: 50%;
 	--postBorderRadius: 18px;
+	--pillBgColorLight: #f0f0f0;
+	--pillTextColorLight: #333;
+	--pillBgColorDark: #007bff;
+	--pillTextColorDark: #fff;
 }
 
 
@@ -275,7 +279,6 @@ h6 { font-size: 16px;}
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 	padding-bottom: 50px;
-	padding-top: 50px;
 	gap:100px;
 }
 
@@ -415,6 +418,31 @@ h6 { font-size: 16px;}
 	color: #fff;
 	background-color: var(--buttonColor);
 	border:none;
+}
+
+.skills-list {
+	text-align: left; /* Center align the skill pills */
+}
+
+.skill-pill {
+	display: inline-block;
+	background-color: var(--buttonColor); /* Primary color for the pill */
+	color: #fff; /* White text for visibility */
+	padding: 5px 15px; /* Padding inside the pill */
+	margin: 5px; /* Spacing between pills */
+	border-radius: 20px; /* Pill shape */
+	font-size: 0.85rem;
+	transition: background-color 0.3s ease; /* Smooth transition for theme change */
+}
+
+body[data-theme='light'] .skill-pill {
+	background-color: var(--pillBgColorLight);
+	color: var(--pillTextColorLight);
+}
+
+body[data-theme='dark'] .skill-pill {
+	background-color: var(--pillBgColorDark);
+	color: var(--pillTextColorDark);
 }
 
 
