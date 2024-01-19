@@ -110,6 +110,24 @@ h6 { font-size: 16px;}
 	background-color: var(--mainColor);
 }
 
+.nav-wrapper2{
+	border-radius:5px 5px 0 0;
+	grid-area:nav-wrapper;
+	border:1px solid var(--borderColor);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: var(--mainColor);
+
+	box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+}
+
+#video-container {
+	-webkit-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+	-moz-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+	box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+}
+
 #navigation a{
 	color:var(--mainText);
 }
@@ -424,18 +442,18 @@ h6 { font-size: 16px;}
 }
 
 .skills-list {
-	text-align: left; /* Center align the skill pills */
+	text-align: left;
 }
 
 .skill-pill {
 	display: inline-block;
-	background-color: var(--buttonColor); /* Primary color for the pill */
-	color: #fff; /* White text for visibility */
-	padding: 5px 15px; /* Padding inside the pill */
-	margin: 5px; /* Spacing between pills */
-	border-radius: 20px; /* Pill shape */
+	background-color: var(--buttonColor);
+	color: #fff;
+	padding: 5px 15px;
+	margin: 5px;
+	border-radius: 20px;
 	font-size: 0.85rem;
-	transition: background-color 0.3s ease; /* Smooth transition for theme change */
+	transition: background-color 0.3s ease;
 }
 
 body[data-theme='light'] .skill-pill {
@@ -448,6 +466,37 @@ body[data-theme='dark'] .skill-pill {
 	color: var(--pillTextColorDark);
 }
 
+.intro-wrapper-full {
+	width: 100%;
+}
+
+.intro-wrapper-full iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+#video-container {
+	/*width: 100%; !* Full width of the container *!*/
+	/*height: 0; !* Set height to 0 and use padding to create aspect ratio *!*/
+	/*padding-bottom: 56.25%; !* Aspect ratio padding for 16:9 *!*/
+	/*position: relative; !* For positioning the iframe absolutely within *!*/
+	position: relative;
+	overflow: hidden; /* Ensures no extra space is visible */
+	/* Set height to 0 and use padding-top to create the aspect ratio */
+	height: 0;
+	padding-top: 56.25%; /* Aspect ratio for 16:9 */
+}
+
+#video-container iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
 
 @media screen and (max-width: 1200px){
 	.main-container{
